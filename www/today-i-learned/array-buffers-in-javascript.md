@@ -3,7 +3,7 @@ title: ArrayBuffers in JavaScript
 createdAt: 10/02/2024
 ---
 
-# {{ $frontmatter.title }}
+# ArrayBuffers in JavaScript
 
 - **ArrayBuffer**: It's a chunk of memory you can't touch directly. It's for handling binary data efficiently in
   JavaScript.
