@@ -46,10 +46,21 @@ export default defineConfig({
       {icon: 'linkedin', link: 'https://www.linkedin.com/in/maciek-sitkowski/'},
       {icon: 'youtube', link: 'https://www.youtube.com/@macieksitkowski'},
     ],
+
     footer: {
       copyright: 'Copyright © 2024-present Maciek Sitkowski',
     },
   },
+
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>',
+      },
+    ],
+  ],
 })
 
 function createSidebarItemFromFile(file: string) {
