@@ -1,5 +1,4 @@
-import {defineConfig, MarkdownEnv} from 'vitepress'
-import type MarkdownIt from 'markdown-it'
+import {defineConfig} from 'vitepress'
 import glob from 'fast-glob'
 import matter from 'gray-matter'
 
@@ -15,8 +14,10 @@ const booksItems = glob
 export default defineConfig({
   title: 'brain.macieksitkowski.com',
   description: "Maciek's knowledge dump",
+  head: [['link', {rel: 'icon', href: '/brain.png'}]],
   lastUpdated: true,
   themeConfig: {
+    logo: '/brain.png',
     editLink: {
       pattern: 'https://github.com/sitek94/brain/edit/main/www/:path',
     },
@@ -61,16 +62,6 @@ export default defineConfig({
       },
     },
   },
-
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>',
-      },
-    ],
-  ],
 })
 
 function createSidebarItemFromFile(file: string) {
