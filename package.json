@@ -1,0 +1,16 @@
+{
+  "name": "brain.macieksitkowski.com",
+  "scripts": {
+    "dev": "vitepress dev www",
+    "build": "vitepress build www",
+    "preview": "vitepress preview www",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.2",
+    "gray-matter": "^4.0.3",
+    "prettier": "^3.2.5",
+    "vitepress": "^1.0.0-rc.42"
+  },
+  "prettier": "@sitek94/style-guide/prettier"
+}

@@ -1,0 +1,16 @@
+{
+  "book": {
+    "prefix": "/book",
+    "scope": "markdown",
+    "body": [
+      "---",
+      "title: ",
+      "author: ",
+      "finishedAt: ",
+      "---",
+      "",
+      "# {{ \$frontmatter.title }}",
+      "",
+    ],
+  },
+}
