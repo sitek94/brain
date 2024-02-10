@@ -15,6 +15,7 @@ const booksItems = glob
 export default defineConfig({
   title: 'brain.macieksitkowski.com',
   description: "Maciek's knowledge dump",
+  lastUpdated: true,
   themeConfig: {
     editLink: {
       pattern: 'https://github.com/sitek94/brain/edit/main/www/:path',
