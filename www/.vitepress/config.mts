@@ -1,5 +1,5 @@
-import {defineConfig} from 'vitepress'
-
+import {defineConfig, MarkdownEnv} from 'vitepress'
+import type MarkdownIt from 'markdown-it'
 import glob from 'fast-glob'
 import matter from 'gray-matter'
 
@@ -52,6 +52,13 @@ export default defineConfig({
 
     footer: {
       copyright: 'Copyright © 2024-present Maciek Sitkowski',
+    },
+
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+      },
     },
   },
 
