@@ -63,23 +63,26 @@ export default defineConfig({
     },
   },
 
-  transformHtml(code, _, ctx) {
-    // Vitepress replaces frontmatter.title with actual title in <h1> tag, but it doesn't do it for:
-    // - href="#frontmatter-title"
-    // - aria-label="Permalink to &quot;{{ $frontmatter.title }}&quot;"
-    // - id="frontmatter-title"
-    // That's why we need to replace it manually.
-    if (code.includes(`frontmatter.title`)) {
-      const title = ctx.pageData.frontmatter.title as string
-      const slug = slugify(title)
+  // Unfortunately, it's not enough because localSearch shows $frontmatter.title as well. This PR needs to be merged
+  // before we can use `transformHtml` to fix frontmatter: https://github.com/vuejs/vitepress/pull/3032
+  // transformHtml(code, _, ctx) {
+  //   // Vitepress replaces frontmatter.title with actual title in <h1> tag, but it doesn't do it for:
+  //   // - href="#frontmatter-title"
+  //   // - aria-label="Permalink to &quot;{{ $frontmatter.title }}&quot;"
+  //   // - id="frontmatter-title"
+  //   // That's why we need to replace it manually.
 
-      code = code.replace('#frontmatter-title', `#${slug}`)
-      code = code.replace('{{ $frontmatter.title }}', title)
-      code = code.replace('frontmatter-title', slug)
-    }
+  //   if (code.includes(`frontmatter.title`)) {
+  //     const title = ctx.pageData.frontmatter.title as string
+  //     const slug = slugify(title)
 
-    return code
-  },
+  //     code = code.replace('#frontmatter-title', `#${slug}`)
+  //     code = code.replace('{{ $frontmatter.title }}', title)
+  //     code = code.replace('frontmatter-title', slug)
+  //   }
+
+  //   return code
+  // },
 })
 
 function createSidebarItemFromFile(file: string) {
