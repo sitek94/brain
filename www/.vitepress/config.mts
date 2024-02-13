@@ -62,6 +62,24 @@ export default defineConfig({
       },
     },
   },
+
+  transformHtml(code, _, ctx) {
+    // Vitepress replaces frontmatter.title with actual title in <h1> tag, but it doesn't do it for:
+    // - href="#frontmatter-title"
+    // - aria-label="Permalink to &quot;{{ $frontmatter.title }}&quot;"
+    // - id="frontmatter-title"
+    // That's why we need to replace it manually.
+    if (code.includes(`frontmatter.title`)) {
+      const title = ctx.pageData.frontmatter.title as string
+      const slug = slugify(title)
+
+      code = code.replace('#frontmatter-title', `#${slug}`)
+      code = code.replace('{{ $frontmatter.title }}', title)
+      code = code.replace('frontmatter-title', slug)
+    }
+
+    return code
+  },
 })
 
 function createSidebarItemFromFile(file: string) {
@@ -71,4 +89,17 @@ function createSidebarItemFromFile(file: string) {
   const createdAt = new Date(year, month - 1, day)
 
   return {text: frontmatter.data.title, createdAt, link}
+}
+
+function slugify(text: string) {
+  return (
+    text
+      .toLowerCase()
+      .trim()
+      // Remove punctuation. [^\w\s]|_ matches any character that is not a word character (a-z, A-Z, 0-9, _),
+      // not a whitespace character, or an underscore. This effectively removes all punctuation.
+      .replace(/[^\w\s]|_/g, '')
+      // Replace all whitespace with a dash. \s+ matches one or more whitespace characters.
+      .replace(/\s+/g, '-')
+  )
 }
