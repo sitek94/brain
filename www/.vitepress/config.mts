@@ -17,7 +17,26 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://brain.macieksitkowski.com',
   },
-  head: [['link', {rel: 'icon', href: '/brain.png'}]],
+  head: [
+    ['link', {rel: 'icon', href: '/brain.png'}],
+    [
+      'script',
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-BM898K8QCN',
+      },
+    ],
+    [
+      'script',
+      {},
+      `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BM898K8QCN');
+      `,
+    ],
+  ],
   lastUpdated: true,
   themeConfig: {
     logo: '/brain.png',
