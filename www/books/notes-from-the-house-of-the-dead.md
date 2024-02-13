@@ -1,5 +1,6 @@
 ---
 title: Notes from the House of the Dead
+tags: literature, classics, russian-literature
 createdAt: 10/02/2024
 ---
 

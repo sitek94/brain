@@ -1,5 +1,6 @@
 ---
 title: ArrayBuffers in JavaScript
+tags: javascript, web-development, performance
 createdAt: 10/02/2024
 ---
 
