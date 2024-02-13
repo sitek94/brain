@@ -12,8 +12,11 @@ const booksItems = glob
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'brain.macieksitkowski.com',
+  title: 'brain.macieksitkowski',
   description: "Maciek's knowledge dump",
+  sitemap: {
+    hostname: 'https://brain.macieksitkowski.com',
+  },
   head: [['link', {rel: 'icon', href: '/brain.png'}]],
   lastUpdated: true,
   themeConfig: {
