@@ -1,18 +1,10 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: Maciek's Brain
   text: A collection of notes, thoughts, and ideas
   tagline: The more I read, the more I acquire, the more certain I am that I know nothing. - Voltaire
-  # actions:
-  #   - theme: brand
-  #     text: Today I Learned
-  #     link: /til
-  #   - theme: alt
-  #     text: Books
-  #     link: /books
 features:
   - title: Today I Learned
     details: Simple notes on new things I learn day by day, mostly around web development and programming.
