@@ -1,15 +1,15 @@
 ---
-title: Add overlay color to <img />
+title: Add overlay color to &lt;img&gt; tag
 tags: css, web-development, frontend
 createdAt: 26/11/2022
 ---
 
-# Add overlay color to <img />
+# Add overlay color to &lt;img&gt; tag
 
-If you want to change the color of a remote image, that you display like this:
+If you want to change the color of a remote image, that you display using the `<img>` tag, like this:
 
 ```html
-<img alt="freeCodeCamp logo" src="https://unpkg.com/simple-icons@7.20.0/icons/freecodecamp.svg" />
+<img alt="logo" src="https://example.com/logo.png" />
 ```
 
 You can use [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) property. It offers a variety of
@@ -20,8 +20,7 @@ Of course, trying to find the correct color manually would be extremely hard. Fo
 tools like [this one](https://isotropic.co/tool/hex-color-to-css-filter/), where you enter a target HEX color and it
 gives you back a computed filter property value.
 
-![Screenshot from 2022-11-23 21-00-10.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669233638115/7j7E98r0b.png
-align="left")
+![Screenshot from 2022-11-23 21-00-10.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1669233638115/7j7E98r0b.png)
 
 All you have to do now, is add it in your CSS:
 
