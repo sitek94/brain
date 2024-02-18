@@ -26,8 +26,7 @@ git checkout @{-N}
 
 Following diagram ([source](https://stackoverflow.com/a/33199051)), illustrates it perfectly:
 
-![git-checkout-recent-branch.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1667845009489/b5dX7qkFW.jpg
-align="left")
+![git-checkout-recent-branch.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1667845009489/b5dX7qkFW.jpg)
 
 ---
 

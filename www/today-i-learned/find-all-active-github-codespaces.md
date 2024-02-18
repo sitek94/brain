@@ -10,8 +10,7 @@ createdAt: 18/11/2022
 
 Today, I've run out of [GitHub Codespaces](https://github.com/features/codespaces) storage.
 
-![Screenshot from 2022-11-18 20-25-28.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1668799585963/x9Bbgzuw7.png
-align="left")
+![Screenshot from 2022-11-18 20-25-28.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1668799585963/x9Bbgzuw7.png)
 
 It was a bit surprising to me, as I haven't used codespaces in a while, so I wanted to check if maybe I've got some
 active ones.
